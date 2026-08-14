@@ -5,14 +5,17 @@
   <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=3500&pause=1000&color=c24920&center=true&vCenter=true&width=650&height=70&lines=Hi,+I'm+Dex;My+project+,+my+rules...🥶" alt="Typing SVG" /></a>
 </p>
 
+
   <!-- Ссылка на твоё приложение генератора обоев -->
   <a href="https://lossdexx.github.io/wp-generator-myfirstproject/">
-    <img src="https://img.shields.io/badge/🚀_Live_Demo-Wallpaper_Generator-00F0FF?style=for-the-badge&logoColor=black" alt="Live Demo">
+    <img src="https://img.shields.io/badge/🚀_Live_Demo-Wallpaper_Generator-c24920?style=for-the-badge&logoColor=black" alt="Live Demo">
   </a>
 
 </div>
 
----
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" />
+</p>
 
 ### 🌌 Featured Project
 
@@ -36,7 +39,9 @@
   </tr>
 </table>
 
----
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" />
+</p>
 
 ### 🛠️ Tech Stack & Skills
 
@@ -52,7 +57,9 @@
 
 </div>
 
----
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" />
+</p>
 
 ### 📊 GitHub Activity & Stats
 
