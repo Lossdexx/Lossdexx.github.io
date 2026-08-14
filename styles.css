@@ -1,0 +1,232 @@
+:root {
+  --bg-dark: #0d0e11;
+  --card-bg: rgba(22, 22, 26, 0.75);
+  --accent: #2fb4f6;
+  --accent-hover: #62c5f9;
+  --text-main: #ffffff;
+  --text-muted: #94a3b8;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  background-color: #313231b3;
+  color: var(--text-main);
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Ambient Background Glow Orb */
+.glow-orb {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(
+    circle,
+    rgba(47, 180, 246, 0.15) 0%,
+    rgba(47, 180, 246, 0) 70%
+  );
+  filter: blur(80px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+  animation: float-glow 8s ease-in-out infinite alternate;
+}
+
+@keyframes float-glow {
+  0% {
+    transform: translate(-52%, -48%) scale(0.95);
+  }
+
+  100% {
+    transform: translate(-48%, -52%) scale(1.05);
+  }
+}
+
+/* Card Layout */
+.profile-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  width: 90%;
+  max-width: 385px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  border-color: rgba(47, 180, 246, 0.25);
+  transform: translateY(-2px);
+  box-shadow:
+    0 24px 60px rgba(47, 180, 246, 0.08),
+    0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.avatar-container {
+  position: relative;
+  width: 68px;
+  height: 68px;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  box-sizing: border-box;
+  object-fit: cover;
+  transition: border-color 0.3s ease;
+}
+
+.profile-card:hover .avatar {
+  border-color: var(--accent);
+}
+
+.status-indicator {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #23a55a;
+  border: 2.5px solid #16161a;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.name-badge h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.badge {
+  background: rgba(47, 180, 246, 0.1);
+  color: var(--accent);
+  border: 1px solid rgba(47, 180, 246, 0.2);
+  font-size: 9.5px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.username {
+  color: var(--text-muted);
+  font-size: 13.5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.username:hover {
+  color: var(--accent);
+}
+
+/* Bio and Quote */
+.quote {
+  font-style: italic;
+  color: #2fb4f6;
+  font-size: 13.5px;
+  line-height: 1.45;
+  margin: 0 0 18px 0;
+  border-left: 2px solid var(--accent);
+  padding-left: 12px;
+  text-align: left;
+}
+
+.bio {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0 0 24px 0;
+  text-align: left;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 11px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #0d0e11;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 4px 15px rgba(47, 180, 246, 0.35);
+  transform: translateY(-0.5px);
+}
+
+.btn-icon {
+  flex-shrink: 0;
+}
+
+.btn-mybutton {
+    background-color: #14181d;
+    border: 2px solid #e5e4e6;
+}
+
+.myspann {
+    color: #e5e4e6;
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 3.8px;
+    font-style: normal;
+    text-shadow: 2px 2px 5px #55bfff;
+}
